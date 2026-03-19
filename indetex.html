@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head> 
-
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>Vende tu piso sin perder tiempo | Yanis Inmobiliaria</title>
 
 <!-- SEO -->
@@ -29,858 +27,871 @@
 <meta name="twitter:description" content="Solo compradores reales en Barcelona.">
 <meta name="twitter:image" content="https://TU-WEB.vercel.app/deja-de-perder-tiempo-venta-piso-barcelona.png">
 
-</head>
-  <style>
-    :root{
-      --bg:#09090b;
-      --bg-2:#111114;
-      --card:#141418;
-      --card-2:#18181c;
-      --line:rgba(255,255,255,.08);
-      --text:#f4f4f5;
-      --muted:#a1a1aa;
-      --muted-2:#71717a;
-      --green:#10b981;
-      --green-2:#34d399;
-      --green-3:#064e3b;
-      --red:#ef4444;
-      --shadow:0 30px 80px rgba(0,0,0,.45);
-      --radius:28px;
-      --radius-sm:18px;
-      --max:1200px;
-    }
-
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(circle at 50% 12%, rgba(16,185,129,.12), transparent 30%),
-        linear-gradient(180deg, #0a0a0c 0%, #09090b 100%);
-      color:var(--text);
-      overflow-x:hidden;
-    }
-
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    .wrap{
-      width:min(var(--max), calc(100% - 32px));
-      margin:0 auto;
-    }
-
-    /* NAV */
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter:blur(12px);
-      background:rgba(9,9,11,.72);
-      border-bottom:1px solid rgba(255,255,255,.05);
-    }
-
-    .nav-inner{
-      width:min(var(--max), calc(100% - 32px));
-      margin:0 auto;
-      min-height:82px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-
-    .brand{
-      font-weight:800;
-      letter-spacing:-.04em;
-      font-size:1.7rem;
-    }
-
-    .brand-dot{
-      color:var(--green);
-    }
-
-    .nav-btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 18px;
-      border-radius:999px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.08);
-      color:var(--text);
-      font-weight:600;
-      transition:.25s ease;
-    }
-
-    .nav-btn:hover{
-      background:rgba(255,255,255,.08);
-      transform:translateY(-1px);
-    }
-
-    /* HERO */
-    .hero{
-      position:relative;
-      padding:56px 0 88px;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      top:60px;
-      left:50%;
-      transform:translateX(-50%);
-      width:680px;
-      height:680px;
-      background:rgba(16,185,129,.10);
-      filter:blur(120px);
-      border-radius:50%;
-      pointer-events:none;
-      z-index:0;
-    }
-
-    .hero-grid{
-      position:relative;
-      z-index:1;
-      display:grid;
-      grid-template-columns: 1.06fr .94fr;
-      gap:68px;
-      align-items:center;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:rgba(16,185,129,.10);
-      border:1px solid rgba(16,185,129,.22);
-      color:var(--green-2);
-      font-size:.94rem;
-      font-weight:600;
-      margin-bottom:22px;
-    }
-
-    .dot{
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:var(--green);
-      box-shadow:0 0 0 0 rgba(16,185,129,.7);
-      animation:pulse 1.8s infinite;
-    }
-
-    @keyframes pulse{
-      0%{ box-shadow:0 0 0 0 rgba(16,185,129,.55); }
-      70%{ box-shadow:0 0 0 12px rgba(16,185,129,0); }
-      100%{ box-shadow:0 0 0 0 rgba(16,185,129,0); }
-    }
-
-    h1{
-      font-size:clamp(2.7rem, 6vw, 4.9rem);
-      line-height:1.05;
-      letter-spacing:-.05em;
-      font-weight:900;
-      max-width:760px;
-      margin-bottom:24px;
-    }
-
-    .gradient-text{
-      background:linear-gradient(90deg, #34d399 0%, #14b8a6 100%);
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-    }
-
-    .hero-text p{
-      font-size:1.14rem;
-      line-height:1.75;
-      color:var(--muted);
-      max-width:640px;
-      margin-bottom:34px;
-    }
-
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:16px;
-      align-items:center;
-    }
-
-    .btn-primary{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      min-height:60px;
-      padding:0 28px;
-      border-radius:20px;
-      background:linear-gradient(135deg, var(--green), #22c55e);
-      color:#052e25;
-      font-weight:800;
-      font-size:1.05rem;
-      box-shadow:0 0 40px rgba(16,185,129,.22);
-      transition:.25s ease;
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-3px);
-      box-shadow:0 0 60px rgba(16,185,129,.30);
-    }
-
-    .meta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:22px;
-      margin-top:24px;
-      color:var(--muted-2);
-      font-size:.95rem;
-      font-weight:600;
-    }
-
-    .meta-item{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .meta-icon{
-      color:var(--green);
-      font-size:1rem;
-    }
-
-    /* PHONE VIDEO */
-    .phone-side{
-      position:relative;
-      display:flex;
-      justify-content:center;
-    }
-
-    .phone{
-      position:relative;
-      width:min(100%, 400px);
-      aspect-ratio:9 / 16;
-      border-radius:42px;
-      overflow:hidden;
-      background:#18181b;
-      border:8px solid #111114;
-      box-shadow:var(--shadow);
-    }
-
-    .phone video{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      opacity:.94;
-      background:#1f1f23;
-    }
-
-    .phone::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to top, rgba(9,9,11,.85), transparent 48%, transparent 100%);
-      pointer-events:none;
-    }
-
-    .floating-card{
-      position:absolute;
-      left:24px;
-      right:24px;
-      bottom:24px;
-      z-index:2;
-      display:flex;
-      align-items:center;
-      gap:14px;
-      padding:16px;
-      border-radius:22px;
-      background:rgba(9,9,11,.78);
-      backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .play-icon{
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      background:rgba(16,185,129,.15);
-      display:grid;
-      place-items:center;
-      color:var(--green-2);
-      flex:0 0 auto;
-      font-size:1.1rem;
-    }
-
-    .floating-card strong{
-      display:block;
-      font-size:.97rem;
-      margin-bottom:4px;
-    }
-
-    .floating-card span{
-      color:var(--muted);
-      font-size:.82rem;
-    }
-
-    .glow-right,
-    .glow-left{
-      position:absolute;
-      border-radius:50%;
-      filter:blur(70px);
-      z-index:-1;
-      pointer-events:none;
-    }
-
-    .glow-right{
-      width:150px;
-      height:150px;
-      right:-24px;
-      top:44%;
-      background:rgba(20,184,166,.26);
-    }
-
-    .glow-left{
-      width:180px;
-      height:180px;
-      left:-30px;
-      bottom:-20px;
-      background:rgba(16,185,129,.22);
-    }
-
-    /* SECTION BASE */
-    .section{
-      padding:88px 0;
-    }
-
-    .section-dark{
-      background:rgba(255,255,255,.02);
-      border-top:1px solid rgba(255,255,255,.05);
-      border-bottom:1px solid rgba(255,255,255,.05);
-    }
-
-    .section-head{
-      text-align:center;
-      max-width:780px;
-      margin:0 auto 56px;
-    }
-
-    .section-head h2{
-      font-size:clamp(2rem, 4vw, 3rem);
-      line-height:1.1;
-      letter-spacing:-.04em;
-      margin-bottom:14px;
-    }
-
-    .section-head p{
-      color:var(--muted);
-      line-height:1.7;
-      font-size:1.04rem;
-    }
-
-    /* COMPARISON */
-    .comparison{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:26px;
-      max-width:1020px;
-      margin:0 auto;
-    }
-
-    .compare-card{
-      position:relative;
-      border-radius:32px;
-      padding:34px 28px 30px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.06);
-      background:#111114;
-    }
-
-    .compare-card::before{
-      content:"";
-      position:absolute;
-      left:0;
-      right:0;
-      top:0;
-      height:4px;
-    }
-
-    .compare-card.bad::before{
-      background:rgba(239,68,68,.7);
-    }
-
-    .compare-card.good{
-      background:linear-gradient(180deg, rgba(6,78,59,.42), #101014 62%);
-      border-color:rgba(16,185,129,.28);
-      box-shadow:0 0 30px rgba(16,185,129,.10);
-    }
-
-    .compare-card.good::before{
-      background:var(--green);
-    }
-
-    .compare-card h3{
-      font-size:1.35rem;
-      margin-bottom:24px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .star{
-      color:var(--green-2);
-    }
-
-    .compare-list{
-      list-style:none;
-      display:grid;
-      gap:18px;
-    }
-
-    .compare-list li{
-      display:grid;
-      grid-template-columns: 26px 1fr;
-      gap:12px;
-      align-items:start;
-      color:var(--muted);
-      line-height:1.6;
-    }
-
-    .good .compare-list li{
-      color:#e5e7eb;
-    }
-
-    .bad-icon{
-      color:var(--red);
-      font-size:1.05rem;
-      line-height:1.5;
-    }
-
-    .good-icon{
-      color:var(--green);
-      font-size:1.05rem;
-      line-height:1.5;
-    }
-
-    /* TESTIMONIOS */
-    .test-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-    }
-
-    .test-card{
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.05);
-      border-radius:32px;
-      padding:30px 24px;
-      transition:.25s ease;
-    }
-
-    .test-card:hover{
-      background:rgba(255,255,255,.05);
-      transform:translateY(-4px);
-    }
-
-    .stars{
-      display:flex;
-      gap:4px;
-      color:var(--green);
-      margin-bottom:20px;
-      font-size:.95rem;
-    }
-
-    .test-card p{
-      color:#d4d4d8;
-      line-height:1.8;
-      margin-bottom:28px;
-      font-size:1rem;
-    }
-
-    .author{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-
-    .avatar{
-      width:42px;
-      height:42px;
-      border-radius:50%;
-      background:#232329;
-      color:#d4d4d8;
-      display:grid;
-      place-items:center;
-      font-weight:800;
-      flex:0 0 auto;
-    }
-
-    .author strong{
-      display:block;
-      font-size:.95rem;
-    }
-
-    .author span{
-      color:var(--muted-2);
-      font-size:.82rem;
-    }
-
-    /* FINAL CTA */
-    .cta-box{
-      position:relative;
-      max-width:980px;
-      margin:0 auto;
-      padding:56px 34px;
-      border-radius:48px;
-      text-align:center;
-      overflow:hidden;
-      background:linear-gradient(135deg, rgba(6,78,59,.46), rgba(17,24,39,.92));
-      border:1px solid rgba(16,185,129,.20);
-    }
-
-    .cta-box::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:radial-gradient(circle at top, rgba(16,185,129,.14), transparent 48%);
-      pointer-events:none;
-    }
-
-    .cta-box h2{
-      position:relative;
-      z-index:1;
-      font-size:clamp(2.1rem, 4vw, 3.3rem);
-      line-height:1.08;
-      letter-spacing:-.04em;
-      margin-bottom:18px;
-    }
-
-    .cta-box p{
-      position:relative;
-      z-index:1;
-      max-width:760px;
-      margin:0 auto 30px;
-      color:#d4d4d8;
-      font-size:1.08rem;
-      line-height:1.8;
-    }
-
-    .cta-box .btn-primary{
-      position:relative;
-      z-index:1;
-    }
-
-    /* FOOTER */
-    .footer{
-      padding:26px 0 40px;
-      color:var(--muted-2);
-      text-align:center;
-      font-size:.9rem;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1024px){
-      .hero-grid{
-        gap:42px;
-      }
-
-      .comparison,
-      .test-grid{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 860px){
-      .nav-btn{
-        display:none;
-      }
-
-      .hero{
-        padding:36px 0 70px;
-      }
-
-      .hero-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-text{
-        text-align:left;
-      }
-
-      .phone-side{
-        order:-1;
-      }
-
-      .phone{
-        max-width:360px;
-      }
-
-      .section{
-        padding:74px 0;
-      }
-
-      .cta-box{
-        border-radius:34px;
-        padding:42px 22px;
-      }
-    }
-
-    @media (max-width: 560px){
-      .wrap,
-      .nav-inner{
-        width:min(var(--max), calc(100% - 22px));
-      }
-
-      .brand{
-        font-size:1.45rem;
-      }
-
-      .eyebrow{
-        font-size:.84rem;
-      }
-
-      .hero-text p{
-        font-size:1rem;
-      }
-
-      .btn-primary{
-        width:100%;
-        min-height:56px;
-        border-radius:18px;
-        padding:0 18px;
-        font-size:1rem;
-      }
-
-      .meta-row{
-        gap:14px;
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .compare-card,
-      .test-card{
-        border-radius:24px;
-      }
-
-  .floating-card{
-  left:16px;
-  right:16px;
-  bottom:60px; /* 🔥 SUBIMOS el overlay */
+<style>
+:root{
+  --bg:#09090b;
+  --bg-2:#111114;
+  --card:#141418;
+  --card-2:#18181c;
+  --line:rgba(255,255,255,.08);
+  --text:#f4f4f5;
+  --muted:#a1a1aa;
+  --muted-2:#71717a;
+  --green:#10b981;
+  --green-2:#34d399;
+  --green-3:#064e3b;
+  --red:#ef4444;
+  --shadow:0 30px 80px rgba(0,0,0,.45);
+  --radius:28px;
+  --radius-sm:18px;
+  --max:1200px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(16,185,129,.12), transparent 30%),
+    linear-gradient(180deg, #0a0a0c 0%, #09090b 100%);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.wrap{
+  width:min(var(--max), calc(100% - 32px));
+  margin:0 auto;
+}
+
+/* NAV */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(12px);
+  background:rgba(9,9,11,.72);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.nav-inner{
+  width:min(var(--max), calc(100% - 32px));
+  margin:0 auto;
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.brand{
+  font-weight:800;
+  letter-spacing:-.04em;
+  font-size:1.7rem;
+}
+
+.brand-dot{
+  color:var(--green);
+}
+
+.nav-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--text);
+  font-weight:600;
+  transition:.25s ease;
+}
+
+.nav-btn:hover{
+  background:rgba(255,255,255,.08);
+  transform:translateY(-1px);
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  padding:56px 0 88px;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  top:60px;
+  left:50%;
+  transform:translateX(-50%);
+  width:680px;
+  height:680px;
+  background:rgba(16,185,129,.10);
+  filter:blur(120px);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:0;
+}
+
+.hero-grid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns: 1.06fr .94fr;
+  gap:68px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(16,185,129,.10);
+  border:1px solid rgba(16,185,129,.22);
+  color:var(--green-2);
+  font-size:.94rem;
+  font-weight:600;
+  margin-bottom:22px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 0 0 rgba(16,185,129,.7);
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  0%{ box-shadow:0 0 0 0 rgba(16,185,129,.55); }
+  70%{ box-shadow:0 0 0 12px rgba(16,185,129,0); }
+  100%{ box-shadow:0 0 0 0 rgba(16,185,129,0); }
+}
+
+h1{
+  font-size:clamp(2.7rem, 6vw, 4.9rem);
+  line-height:1.05;
+  letter-spacing:-.05em;
+  font-weight:900;
+  max-width:760px;
+  margin-bottom:24px;
+}
+
+.gradient-text{
+  background:linear-gradient(90deg, #34d399 0%, #14b8a6 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero-text p{
+  font-size:1.14rem;
+  line-height:1.75;
+  color:var(--muted);
+  max-width:640px;
+  margin-bottom:34px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  align-items:center;
+}
+
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:60px;
+  padding:0 28px;
+  border-radius:20px;
+  background:linear-gradient(135deg, var(--green), #22c55e);
+  color:#052e25;
+  font-weight:800;
+  font-size:1.05rem;
+  box-shadow:0 0 40px rgba(16,185,129,.22);
+  transition:.25s ease;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 60px rgba(16,185,129,.30);
+}
+
+.meta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+  margin-top:24px;
+  color:var(--muted-2);
+  font-size:.95rem;
+  font-weight:600;
+}
+
+.meta-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.meta-icon{
+  color:var(--green);
+  font-size:1rem;
+}
+
+/* PHONE VIDEO */
+.phone-side{
+  position:relative;
+  display:flex;
+  justify-content:center;
+}
+
+.phone{
+  position:relative;
+  width:min(100%, 400px);
+  aspect-ratio:9 / 16;
+  border-radius:42px;
+  overflow:hidden;
+  background:#18181b;
+  border:8px solid #111114;
+  box-shadow:var(--shadow);
+}
+
+.phone video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:.94;
+  background:#1f1f23;
+}
+
+/* NUEVO: para YouTube iframe */
+.phone iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.phone::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(9,9,11,.85), transparent 48%, transparent 100%);
   pointer-events:none;
 }
-.phone video{
+
+.floating-card{
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:24px;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  border-radius:22px;
+  background:rgba(9,9,11,.78);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.play-icon{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:rgba(16,185,129,.15);
+  display:grid;
+  place-items:center;
+  color:var(--green-2);
+  flex:0 0 auto;
+  font-size:1.1rem;
+}
+
+.floating-card strong{
+  display:block;
+  font-size:.97rem;
+  margin-bottom:4px;
+}
+
+.floating-card span{
+  color:var(--muted);
+  font-size:.82rem;
+}
+
+.glow-right,
+.glow-left{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(70px);
+  z-index:-1;
+  pointer-events:none;
+}
+
+.glow-right{
+  width:150px;
+  height:150px;
+  right:-24px;
+  top:44%;
+  background:rgba(20,184,166,.26);
+}
+
+.glow-left{
+  width:180px;
+  height:180px;
+  left:-30px;
+  bottom:-20px;
+  background:rgba(16,185,129,.22);
+}
+
+/* SECTION BASE */
+.section{
+  padding:88px 0;
+}
+
+.section-dark{
+  background:rgba(255,255,255,.02);
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.section-head{
+  text-align:center;
+  max-width:780px;
+  margin:0 auto 56px;
+}
+
+.section-head h2{
+  font-size:clamp(2rem, 4vw, 3rem);
+  line-height:1.1;
+  letter-spacing:-.04em;
+  margin-bottom:14px;
+}
+
+.section-head p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:1.04rem;
+}
+
+/* COMPARISON */
+.comparison{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+  max-width:1020px;
+  margin:0 auto;
+}
+
+.compare-card{
+  position:relative;
+  border-radius:32px;
+  padding:34px 28px 30px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.06);
+  background:#111114;
+}
+
+.compare-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:4px;
+}
+
+.compare-card.bad::before{
+  background:rgba(239,68,68,.7);
+}
+
+.compare-card.good{
+  background:linear-gradient(180deg, rgba(6,78,59,.42), #101014 62%);
+  border-color:rgba(16,185,129,.28);
+  box-shadow:0 0 30px rgba(16,185,129,.10);
+}
+
+.compare-card.good::before{
+  background:var(--green);
+}
+
+.compare-card h3{
+  font-size:1.35rem;
+  margin-bottom:24px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.star{
+  color:var(--green-2);
+}
+
+.compare-list{
+  list-style:none;
+  display:grid;
+  gap:18px;
+}
+
+.compare-list li{
+  display:grid;
+  grid-template-columns: 26px 1fr;
+  gap:12px;
+  align-items:start;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.good .compare-list li{
+  color:#e5e7eb;
+}
+
+.bad-icon{
+  color:var(--red);
+  font-size:1.05rem;
+  line-height:1.5;
+}
+
+.good-icon{
+  color:var(--green);
+  font-size:1.05rem;
+  line-height:1.5;
+}
+
+/* TESTIMONIOS */
+.test-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.test-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.05);
+  border-radius:32px;
+  padding:30px 24px;
+  transition:.25s ease;
+}
+
+.test-card:hover{
+  background:rgba(255,255,255,.05);
+  transform:translateY(-4px);
+}
+
+.stars{
+  display:flex;
+  gap:4px;
+  color:var(--green);
+  margin-bottom:20px;
+  font-size:.95rem;
+}
+
+.test-card p{
+  color:#d4d4d8;
+  line-height:1.8;
+  margin-bottom:28px;
+  font-size:1rem;
+}
+
+.author{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.avatar{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#232329;
+  color:#d4d4d8;
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  flex:0 0 auto;
+}
+
+.author strong{
+  display:block;
+  font-size:.95rem;
+}
+
+.author span{
+  color:var(--muted-2);
+  font-size:.82rem;
+}
+
+/* FINAL CTA */
+.cta-box{
+  position:relative;
+  max-width:980px;
+  margin:0 auto;
+  padding:56px 34px;
+  border-radius:48px;
+  text-align:center;
+  overflow:hidden;
+  background:linear-gradient(135deg, rgba(6,78,59,.46), rgba(17,24,39,.92));
+  border:1px solid rgba(16,185,129,.20);
+}
+
+.cta-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top, rgba(16,185,129,.14), transparent 48%);
+  pointer-events:none;
+}
+
+.cta-box h2{
+  position:relative;
+  z-index:1;
+  font-size:clamp(2.1rem, 4vw, 3.3rem);
+  line-height:1.08;
+  letter-spacing:-.04em;
+  margin-bottom:18px;
+}
+
+.cta-box p{
+  position:relative;
+  z-index:1;
+  max-width:760px;
+  margin:0 auto 30px;
+  color:#d4d4d8;
+  font-size:1.08rem;
+  line-height:1.8;
+}
+
+.cta-box .btn-primary{
   position:relative;
   z-index:1;
 }
-    }
-  </style>
+
+/* FOOTER */
+.footer{
+  padding:26px 0 40px;
+  color:var(--muted-2);
+  text-align:center;
+  font-size:.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px){
+  .hero-grid{
+    gap:42px;
+  }
+
+  .comparison,
+  .test-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 860px){
+  .nav-btn{
+    display:none;
+  }
+
+  .hero{
+    padding:36px 0 70px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-text{
+    text-align:left;
+  }
+
+  .phone-side{
+    order:-1;
+  }
+
+  .phone{
+    max-width:360px;
+  }
+
+  .section{
+    padding:74px 0;
+  }
+
+  .cta-box{
+    border-radius:34px;
+    padding:42px 22px;
+  }
+}
+
+@media (max-width: 560px){
+  .wrap,
+  .nav-inner{
+    width:min(var(--max), calc(100% - 22px));
+  }
+
+  .brand{
+    font-size:1.45rem;
+  }
+
+  .eyebrow{
+    font-size:.84rem;
+  }
+
+  .hero-text p{
+    font-size:1rem;
+  }
+
+  .btn-primary{
+    width:100%;
+    min-height:56px;
+    border-radius:18px;
+    padding:0 18px;
+    font-size:1rem;
+  }
+
+  .meta-row{
+    gap:14px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .compare-card,
+  .test-card{
+    border-radius:24px;
+  }
+
+  .floating-card{
+    left:16px;
+    right:16px;
+    bottom:60px;
+    pointer-events:none;
+  }
+
+  .phone video{
+    position:relative;
+    z-index:1;
+  }
+}
+</style>
 </head>
 <body> 
 
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="brand">YANIS<span class="brand-dot">.</span></div>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">YANIS<span class="brand-dot">.</span></div>
 
-      <a
-        class="nav-btn"
-        href="https://wa.me/34608180231?text=Hola%20Yanis,%20quiero%20vender%20mi%20piso.%20Puedes%20contactarme%3F"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        💬 Hablemos
-      </a>
-    </div>
-  </header>
+    <a
+      class="nav-btn"
+      href="https://wa.me/34608180231?text=Hola%20Yanis,%20quiero%20vender%20mi%20piso.%20Puedes%20contactarme%3F"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      💬 Hablemos
+    </a>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-text">
-          <div class="eyebrow">
-            <span class="dot"></span>
-            Agente Inmobiliaria en Barcelona
-          </div>
-
-          <h1>
-            Deja de perder tiempo con
-            <span class="gradient-text">visitas que no compran.</span>
-          </h1>
-
-          <p>
-            Soy Yanis. No enseño pisos a cualquiera. Trabajo exclusivamente con compradores reales, filtrados financieramente y listos para comprar tu propiedad.
-          </p>
-
-          <div class="hero-actions">
-            <a
-              class="btn-primary"
-              href="https://wa.me/34608180231?text=Hola%20Yanis,%20quiero%20vender%20mi%20piso.%20Puedes%20contactarme%3F"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💬 Quiero vender mi piso
-            </a>
-          </div>
-
-          <div class="meta-row">
-            <div class="meta-item">
-              <span class="meta-icon">🛡️</span>
-              <span>100% confidencial</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-icon">⏱️</span>
-              <span>Respuesta rápida</span>
-            </div>
-          </div>
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <div class="eyebrow">
+          <span class="dot"></span>
+          Agente Inmobiliaria en Barcelona
         </div>
 
-        <!-- VIDEO CORREGIDO -->
-        <div class="phone-side">
-          <div class="phone">
-            <video controls playsinline>
-              <source src="video-inmobiliario.mp4" type="video/mp4">
-            </video>
+        <h1>
+          Deja de perder tiempo con
+          <span class="gradient-text">visitas que no compran.</span>
+        </h1>
 
-            <!-- OVERLAY NO BLOQUEANTE -->
-            <div class="floating-card">
-              <div class="play-icon">▶</div>
-              <div>
-                <strong>Conoce mi método</strong>
-                <span>Venta rápida y segura</span>
-              </div>
-            </div>
-          </div>
+        <p>
+          Soy Yanis. No enseño pisos a cualquiera. Trabajo exclusivamente con compradores reales, filtrados financieramente y listos para comprar tu propiedad.
+        </p>
 
-          <div class="glow-right"></div>
-          <div class="glow-left"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Por qué mi método funciona</h2>
-          <p>
-            La diferencia entre tener tu piso meses en el mercado y venderlo al precio correcto en semanas.
-          </p>
-        </div>
-
-        <div class="comparison">
-          <article class="compare-card bad">
-            <h3>Agencias Tradicionales</h3>
-            <ul class="compare-list">
-              <li><span class="bad-icon">✖</span><span>Visitas de curiosos sin capacidad real.</span></li>
-              <li><span class="bad-icon">✖</span><span>Meses de negociaciones vacías y ofertas a la baja.</span></li>
-              <li><span class="bad-icon">✖</span><span>Tu piso se quema en los portales inmobiliarios.</span></li>
-              <li><span class="bad-icon">✖</span><span>Pérdida de tiempo enseñando la casa constantemente.</span></li>
-            </ul>
-          </article>
-
-          <article class="compare-card good">
-            <h3>El Método Yanis <span class="star">★</span></h3>
-            <ul class="compare-list">
-              <li><span class="good-icon">✔</span><span>Filtro financiero estricto antes de cada visita.</span></li>
-              <li><span class="good-icon">✔</span><span>Solo compradores con intención real y presupuesto.</span></li>
-              <li><span class="good-icon">✔</span><span>Estrategia de venta privada y exclusiva.</span></li>
-              <li><span class="good-icon">✔</span><span>Venta rápida, al mejor precio y sin estrés.</span></li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Resultados reales</h2>
-          <p>
-            Lo que dicen los propietarios que ya han vendido conmigo en Barcelona.
-          </p>
-        </div>
-
-        <div class="test-grid">
-          <article class="test-card">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Después de semanas recibiendo visitas que no iban a ningún sitio, Yanis me presentó a un comprador real en pocos días.”
-            </p>
-            <div class="author">
-              <div class="avatar">M</div>
-              <div>
-                <strong>Marta G.</strong>
-                <span>Barcelona</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="test-card">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Solo vienen personas que realmente pueden comprar. Eso cambia todo.”
-            </p>
-            <div class="author">
-              <div class="avatar">C</div>
-              <div>
-                <strong>Carlos R.</strong>
-                <span>Sant Martí</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="test-card">
-            <div class="stars">★★★★★</div>
-            <p>
-              “Mucho más rápido porque ya venían filtrados y listos.”
-            </p>
-            <div class="author">
-              <div class="avatar">L</div>
-              <div>
-                <strong>Laura P.</strong>
-                <span>L’Hospitalet</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="cta-box">
-          <h2>¿Listo para vender de verdad?</h2>
-          <p>
-            Escríbeme por WhatsApp y te explico cómo vender sin perder tiempo.
-          </p>
-
+        <div class="hero-actions">
           <a
             class="btn-primary"
             href="https://wa.me/34608180231?text=Hola%20Yanis,%20quiero%20vender%20mi%20piso.%20Puedes%20contactarme%3F"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            💬 Hablar por WhatsApp
+            💬 Quiero vender mi piso
           </a>
         </div>
+
+        <div class="meta-row">
+          <div class="meta-item">
+            <span class="meta-icon">🛡️</span>
+            <span>100% confidencial</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">⏱️</span>
+            <span>Respuesta rápida</span>
+          </div>
+        </div>
       </div>
-    </section>
 
-  </main>
+      <!-- VIDEO CORREGIDO -->
+      <div class="phone-side">
+        <div class="phone">
+          <iframe
+            src="https://www.youtube.com/embed/13DB06ARwVM"
+            title="Video inmobiliario"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
 
-  <footer class="footer">
-    <div class="wrap">
-      Yanis Inmobiliaria · Barcelona
+          <!-- OVERLAY NO BLOQUEANTE -->
+          <div class="floating-card">
+            <div class="play-icon">▶</div>
+            <div>
+              <strong>Conoce mi método</strong>
+              <span>Venta rápida y segura</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glow-right"></div>
+        <div class="glow-left"></div>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <section class="section section-dark">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Por qué mi método funciona</h2>
+        <p>
+          La diferencia entre tener tu piso meses en el mercado y venderlo al precio correcto en semanas.
+        </p>
+      </div>
+
+      <div class="comparison">
+        <article class="compare-card bad">
+          <h3>Agencias Tradicionales</h3>
+          <ul class="compare-list">
+            <li><span class="bad-icon">✖</span><span>Visitas de curiosos sin capacidad real.</span></li>
+            <li><span class="bad-icon">✖</span><span>Meses de negociaciones vacías y ofertas a la baja.</span></li>
+            <li><span class="bad-icon">✖</span><span>Tu piso se quema en los portales inmobiliarios.</span></li>
+            <li><span class="bad-icon">✖</span><span>Pérdida de tiempo enseñando la casa constantemente.</span></li>
+          </ul>
+        </article>
+
+        <article class="compare-card good">
+          <h3>El Método Yanis <span class="star">★</span></h3>
+          <ul class="compare-list">
+            <li><span class="good-icon">✔</span><span>Filtro financiero estricto antes de cada visita.</span></li>
+            <li><span class="good-icon">✔</span><span>Solo compradores con intención real y presupuesto.</span></li>
+            <li><span class="good-icon">✔</span><span>Estrategia de venta privada y exclusiva.</span></li>
+            <li><span class="good-icon">✔</span><span>Venta rápida, al mejor precio y sin estrés.</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Resultados reales</h2>
+        <p>
+          Lo que dicen los propietarios que ya han vendido conmigo en Barcelona.
+        </p>
+      </div>
+
+      <div class="test-grid">
+        <article class="test-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Después de semanas recibiendo visitas que no iban a ningún sitio, Yanis me presentó a un comprador real en pocos días.”
+          </p>
+          <div class="author">
+            <div class="avatar">M</div>
+            <div>
+              <strong>Marta G.</strong>
+              <span>Barcelona</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="test-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Solo vienen personas que realmente pueden comprar. Eso cambia todo.”
+          </p>
+          <div class="author">
+            <div class="avatar">C</div>
+            <div>
+              <strong>Carlos R.</strong>
+              <span>Sant Martí</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="test-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            “Mucho más rápido porque ya venían filtrados y listos.”
+          </p>
+          <div class="author">
+            <div class="avatar">L</div>
+            <div>
+              <strong>Laura P.</strong>
+              <span>L’Hospitalet</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-box">
+        <h2>¿Listo para vender de verdad?</h2>
+        <p>
+          Escríbeme por WhatsApp y te explico cómo vender sin perder tiempo.
+        </p>
+
+        <a
+          class="btn-primary"
+          href="https://wa.me/34608180231?text=Hola%20Yanis,%20quiero%20vender%20mi%20piso.%20Puedes%20contactarme%3F"
+          target="_blank"
+        >
+          💬 Hablar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    Yanis Inmobiliaria · Barcelona
+  </div>
+</footer>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector("video");
